@@ -1,0 +1,6 @@
+{
+  "schemaType": "NERDLET",
+  "id": "client-log-nerdlet",
+  "displayName": "Client Logs",
+  "description": "Browser Logs in Context"
+}
