@@ -11,6 +11,10 @@ has been produced, the user will also not be able to take advantage of New Relic
 The Browers LIC is an opionated first release.  It is assumed that users who take advantage of this open source application have the ability to produce their own universal ID that can be utilized by this application.  For the sake of this release, the author has utilized an attribute called UUID or Universal User Id.
 The UUID in concert with the entityGUID is utilized to locate relevant content from New Relic logs.
 
+Once the application has been deployed, please proceed to New Relic Browser Application
+
+![Screenshot #1](/catalog/screenshots/Access.png)
+
 ## Example of User Code
 
 Examples of User Code and references will be posted here.  It is with this code that the user will be sending Browser specific content that can be ingested by New Relic log forwarder
