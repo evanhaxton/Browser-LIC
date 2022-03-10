@@ -1,6 +1,13 @@
 {
   "schemaType": "NERDLET",
   "id": "client-log-nerdlet",
-  "displayName": "Client Logs",
-  "description": "Browser Logs in Context"
+  "displayName": "JS ErrorLogs",
+  "description": "Browser Logs in Context",
+  "context": {
+    "entities": [
+      {
+        "domain": "BROWSER"
+      }
+    ]
+  }
 }

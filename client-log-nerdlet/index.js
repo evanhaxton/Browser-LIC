@@ -1,17 +1,35 @@
 import React from 'react';
-import { Grid, GridItem } from 'nr1';
-import QueryLogsSection from './query-section';
+import { PlatformStateContext, NerdletStateContext, Grid, GridItem, AccountPicker} from 'nr1';
 import BrowserLogs from './browser-logs';
 
+
+
 export default class ClientLogNerdLet extends React.Component {
+    
+  constructor() {
+    super();
+  }
+
+  onChangeAccount(_, value) {
+    this.setState({ accountId: value });
+  }
+
     render() {
-        return <div>
-            <br/>
-            <br/>
-            <Grid className="wrapper">
-            <GridItem columnSpan={12} columnStart={12} columnEnd={12} ><QueryLogsSection /></GridItem>
-            <GridItem columnSpan={12}columnStart={2} columnEnd={11}><BrowserLogs /></GridItem>
+    return (
+      <PlatformStateContext.Consumer>
+        {({ accountId }) => (
+        <NerdletStateContext.Consumer>
+         {({ entityGuid }) => (
+          <div>
+            <Grid className="top-chart">
+                <GridItem columnSpan={12}columnStart={1} columnEnd={12}><BrowserLogs accountId={accountId} entityGuid={entityGuid}/></GridItem>
             </Grid>
-        </div>
+          </div>
+         )}
+       </NerdletStateContext.Consumer>
+        )}
+      </PlatformStateContext.Consumer>
+    );
+
     }
 }
