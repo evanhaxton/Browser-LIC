@@ -13,7 +13,7 @@ The UUID in concert with the entityGUID is utilized to locate relevant content f
 
 Once the application has been deployed, please proceed to New Relic Browser Application
 
-![Screenshot #1](/catalog/screenshots/Access.png)
+![Screenshot #1](/catalog/Access.png)
 
 ## Example of User Code
 
